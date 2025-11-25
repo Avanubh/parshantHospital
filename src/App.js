@@ -13,7 +13,6 @@ import { HOSPITAL_NAME } from './data';
 import AboutUsPage from './pages/AboutUsPage';
 import { WhatsAppIcon } from './components/Icons';
 import Footer from './components/footer';
-import op1 from './images/op1.jpeg'; // Keep hero image import here if needed elsewhere
 
 const App = () => {
     const [openIndex, setOpenIndex] = useState(null);

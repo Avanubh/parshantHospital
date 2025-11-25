@@ -6,7 +6,7 @@ import drf1 from '../images/drf1.jpeg';
 import st1 from '../images/st1.jpeg';
 import memcard1 from '../images/memcard1.png';
 import { specialtiesData, testimonialsData, benefitsData, faqData, HOSPITAL_NAME } from '../data';
-import { ChevronDownIcon, AccessibilityIcon, ConvenienceIcon, SecurityIcon, ConfidentialityIcon, CertifiedIcon, AffordabilityIcon, MapPinIcon, ChevronLeftIcon, ChevronRightIcon } from '../components/Icons';
+import { ChevronDownIcon, AccessibilityIcon, ConvenienceIcon, SecurityIcon, ConfidentialityIcon, CertifiedIcon, AffordabilityIcon, ChevronLeftIcon, ChevronRightIcon } from '../components/Icons';
 
 const images = [op1, dr1, drf1, st1];
 
