@@ -1,6 +1,5 @@
 // src/pages/ServiceDetailPage.js (updated with additional general services)
 import React from 'react';
-import { HOSPITAL_NAME } from '../data';
 
 // Import images
 import cathLabImg from '../images/services/Cath Lab.png';
@@ -244,14 +243,14 @@ const ServiceDetailPage = ({ serviceName, setCurrentPage }) => {
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4">
         {/* Breadcrumb Navigation */}
-        <nav className="mb-8 text-sm text-gray-600">
-          <a href="#" onClick={(e) => { e.preventDefault(); navigateToHome(); }} className="hover:text-[#40c1b9]">
+        <nav className="mb-8 text-sm text-gray-600 flex items-center">
+          <button onClick={navigateToHome} className="hover:text-[#40c1b9] bg-transparent border-none cursor-pointer p-0">
             Home
-          </a>
+          </button>
           <span className="mx-2">/</span>
-          <a href="#" onClick={(e) => { e.preventDefault(); navigateToServices(); }} className="hover:text-[#40c1b9]">
+          <button onClick={navigateToServices} className="hover:text-[#40c1b9] bg-transparent border-none cursor-pointer p-0">
             Our Services
-          </a>
+          </button>
           <span className="mx-2">/</span>
           <span className="font-semibold">{service.title}</span>
         </nav>

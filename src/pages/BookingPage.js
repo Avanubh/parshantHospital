@@ -1,7 +1,7 @@
 // src/pages/BookingPage.js
 import React, { useState } from 'react';
 import { HOSPITAL_NAME } from '../data';
-import { WhatsAppIcon, PhoneIcon, MailIcon, MapPinIcon } from '../components/Icons';
+import { WhatsAppIcon } from '../components/Icons';
 
 const BookingPage = ({ selectedDoctor, setCurrentPage }) => {
     const [formData, setFormData] = useState({

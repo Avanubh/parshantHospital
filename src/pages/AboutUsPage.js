@@ -18,45 +18,6 @@ const AboutUsPage = ({ setCurrentPage }) => {
         return () => clearInterval(interval);
     }, []);
 
-    const hospitals = [
-        {
-            name: 'Prashant Heart Hospital - Bangalore',
-            location: 'HSR Layout, Bangalore, Karnataka',
-            established: '2010',
-            beds: '250+',
-            specialties: 'Cardiology, Neurology, Orthopedics',
-            imageUrl: 'https://placehold.co/600x400/40c1b9/ffffff?text=Bangalore+Hospital',
-            description: 'Our flagship hospital in Bangalore offers state-of-the-art facilities with a focus on cardiac care and advanced neurology treatments. Serving over 50,000 patients annually.'
-        },
-        {
-            name: 'Prashant Heart Hospital - Pune',
-            location: 'Deccan Gymkhana, Pune, Maharashtra',
-            established: '2015',
-            beds: '180+',
-            specialties: 'Oncology, Pediatrics, Gastroenterology',
-            imageUrl: 'https://placehold.co/600x400/28a745/ffffff?text=Pune+Hospital',
-            description: 'A leading center for cancer treatment and child healthcare in Pune, equipped with cutting-edge oncology suites and pediatric ICUs.'
-        },
-        {
-            name: 'Prashant Heart Hospital - Mumbai',
-            location: 'Andheri East, Mumbai, Maharashtra',
-            established: '2018',
-            beds: '300+',
-            specialties: 'Orthopedics, Gynecology, Emergency Care',
-            imageUrl: 'https://placehold.co/600x400/fe6645/ffffff?text=Mumbai+Hospital',
-            description: 'Mumbai\'s premier multi-specialty hospital renowned for orthopedic surgeries and 24/7 emergency services, handling high-volume trauma cases.'
-        },
-        {
-            name: 'Prashant Heart Hospital - Delhi',
-            location: 'Dwarka, New Delhi, NCR',
-            established: '2020',
-            beds: '220+',
-            specialties: 'Nephrology, Endocrinology, Pulmonology',
-            imageUrl: 'https://placehold.co/600x400/ffc107/000000?text=Delhi+Hospital',
-            description: 'Delhi\'s specialized facility for kidney care and respiratory health, featuring advanced dialysis units and endocrine research labs.'
-        }
-    ];
-
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -64,36 +25,36 @@ const AboutUsPage = ({ setCurrentPage }) => {
 
                 {/* Image Scroller Section */}
                 <section className="mb-16">
-                <div className="relative w-full max-w-4xl mx-auto">
-                    <div className="overflow-hidden rounded-3xl shadow-2xl h-64 md:h-80">
-                    {aboutImages.map((img, index) => (
-                        <img
-                        key={index}
-                        src={img}
-                        alt={`About ${index + 1}`}
-                        className={`w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
-                        />
-                    ))}
+                    <div className="relative w-full max-w-4xl mx-auto">
+                        <div className="overflow-hidden rounded-3xl shadow-2xl h-64 md:h-80">
+                            {aboutImages.map((img, index) => (
+                                <img
+                                    key={index}
+                                    src={img}
+                                    alt={`About ${index + 1}`}
+                                    className={`w-full h-full object-cover transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+                                />
+                            ))}
+                        </div>
+                        {/* Slide Indicators */}
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                            {aboutImages.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setCurrentSlide(index)}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-[#40c1b9] scale-110' : 'bg-gray-400'}`}
+                                />
+                            ))}
+                        </div>
                     </div>
-                    {/* Slide Indicators */}
-                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                    {aboutImages.map((_, index) => (
-                        <button
-                        key={index}
-                        onClick={() => setCurrentSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-[#40c1b9] scale-110' : 'bg-gray-400'}`}
-                        />
-                    ))}
-                    </div>
-                </div>
                 </section>
 
-                
+
                 {/* Hero Section */}
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-4">About {HOSPITAL_NAME}</h1>
                     <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-                        Founded in 2010, {HOSPITAL_NAME} is a network of premier multi-specialty hospitals dedicated to providing compassionate, high-quality healthcare across India. 
+                        Founded in 2010, {HOSPITAL_NAME} is a network of premier multi-specialty hospitals dedicated to providing compassionate, high-quality healthcare across India.
                         With a commitment to innovation, patient-centric care, and medical excellence, we serve millions with our state-of-the-art facilities and expert teams.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
@@ -112,49 +73,24 @@ const AboutUsPage = ({ setCurrentPage }) => {
                     </div>
                 </div>
 
-                
-
 
                 {/* Mission & Vision */}
                 <div className="grid md:grid-cols-2 gap-12 mb-16">
                     <div className="bg-white p-8 rounded-3xl shadow-xl">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
                         <p className="text-gray-600 leading-relaxed">
-                            To deliver accessible, affordable, and world-class healthcare services that empower individuals and communities to lead healthier lives. 
+                            To deliver accessible, affordable, and world-class healthcare services that empower individuals and communities to lead healthier lives.
                             We strive to blend cutting-edge technology with compassionate care, ensuring every patient receives personalized attention and the best possible outcomes.
                         </p>
                     </div>
                     <div className="bg-white p-8 rounded-3xl shadow-xl">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
                         <p className="text-gray-600 leading-relaxed">
-                            To be India\'s most trusted healthcare network, expanding our footprint to every corner of the country while advancing medical research and education. 
+                            To be India's most trusted healthcare network, expanding our footprint to every corner of the country while advancing medical research and education.
                             We envision a future where preventive care and digital health innovations make quality treatment available to all.
                         </p>
                     </div>
                 </div>
-
-                {/* Our Hospitals */}
-                {/* <div className="mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">Our Hospitals Network</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {hospitals.map((hospital, index) => (
-                            <div key={index} className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-                                <img
-                                    src={hospital.imageUrl}
-                                    alt={hospital.name}
-                                    className="w-full h-48 object-cover"
-                                />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{hospital.name}</h3>
-                                    <p className="text-sm text-gray-600 mb-1">Established: {hospital.established}</p>
-                                    <p className="text-sm text-gray-600 mb-1">Beds: {hospital.beds}</p>
-                                    <p className="text-sm text-[#40c1b9] mb-3">{hospital.specialties}</p>
-                                    <p className="text-gray-600 text-sm leading-relaxed">{hospital.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
 
                 {/* Core Values */}
                 <div className="text-center mb-16">

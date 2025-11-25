@@ -96,16 +96,15 @@ const App = () => {
                         <span className="text-xl font-bold text-[#40c1b9]">{HOSPITAL_NAME}</span>
                     </div>
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('OurServices'); }} className={`text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'OurServices' ? 'font-bold text-[#40c1b9]' : ''}`}>Our Services</a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('Doctors'); }} className={`text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'Doctors' ? 'font-bold text-[#40c1b9]' : ''}`}>Find a Doctor</a>
-                        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('Gallery'); }} className={`text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'Gallery' ? 'font-bold text-[#40c1b9]' : ''}`}>Gallery</a>
-                        <a
-                            href="#"
-                            onClick={(e) => { e.preventDefault(); setCurrentPage('AboutUs'); }}
-                            className={`text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'AboutUs' ? 'font-bold text-[#40c1b9]' : ''}`}
+                        <button onClick={() => setCurrentPage('OurServices')} className={`bg-transparent border-none cursor-pointer text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'OurServices' ? 'font-bold text-[#40c1b9]' : ''}`}>Our Services</button>
+                        <button onClick={() => setCurrentPage('Doctors')} className={`bg-transparent border-none cursor-pointer text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'Doctors' ? 'font-bold text-[#40c1b9]' : ''}`}>Find a Doctor</button>
+                        <button onClick={() => setCurrentPage('Gallery')} className={`bg-transparent border-none cursor-pointer text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'Gallery' ? 'font-bold text-[#40c1b9]' : ''}`}>Gallery</button>
+                        <button
+                            onClick={() => setCurrentPage('AboutUs')}
+                            className={`bg-transparent border-none cursor-pointer text-gray-600 hover:text-gray-900 transition-colors duration-200 ${currentPage === 'AboutUs' ? 'font-bold text-[#40c1b9]' : ''}`}
                         >
                             About Us
-                        </a>
+                        </button>
                     </div>
                     <div className="flex items-center space-x-2 md:space-x-4">
                         <button
